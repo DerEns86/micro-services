@@ -16,8 +16,8 @@ public class ProjectController {
 
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
-    public void createProject(@RequestBody Project project) {
-        projectService.save(project);
+    public Project createProject(@RequestBody Project project) {
+      return projectService.save(project);
     }
 
     @GetMapping

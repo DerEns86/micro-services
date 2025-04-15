@@ -10,8 +10,8 @@ import java.util.List;
 public class ProjectService {
     private final ProjectRepository projectRepository;
 
-    public void save(Project project) {
-        projectRepository.save(project);
+    public Project save(Project project) {
+       return projectRepository.save(project);
     }
 
     public List<Project> findAllProjects() {
