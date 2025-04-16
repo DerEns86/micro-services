@@ -28,8 +28,8 @@ class EmployeeServiceTest {
     void findAllEmployees_shouldReturnAllEmployeesAsList() {
 
         //GIVEN
-        Employee employee1 = new Employee(1, "First Employee", "employee1@mail.com", "0001", "Test Address1", "Position1", 1);
-        Employee employee2 = new Employee(2, "Second Employee", "employee2@mail.com", "0002", "Test Address2", "Position2", 1);
+        Employee employee1 = new Employee(1, "First Employee", "employee1@mail.com", "0001", "Test Address1", "Position1");
+        Employee employee2 = new Employee(2, "Second Employee", "employee2@mail.com", "0002", "Test Address2", "Position2");
         when(employeeRepository.findAll()).thenReturn(List.of(employee1, employee2));
 
         //WHEN
@@ -59,7 +59,7 @@ class EmployeeServiceTest {
     @Test
     void createEmployee() {
         //GIVEN
-        Employee employeeToSave = new Employee(1, "First Employee", "employee1@mail.com", "0001", "Test Address1", "Position1", 1);
+        Employee employeeToSave = new Employee(1, "First Employee", "employee1@mail.com", "0001", "Test Address1", "Position1");
         when(employeeRepository.save(employeeToSave)).thenReturn(employeeToSave);
 
         //WHEN

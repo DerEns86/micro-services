@@ -48,7 +48,6 @@ class EmployeeIntegrationTest {
         employee.setPhone("0001");
         employee.setAddress("Musterstraße 1");
         employee.setPosition("Developer");
-        employee.setAssignedProjectId(1);
 
         // when: POST
         ResponseEntity<Employee> postResponse = restTemplate.postForEntity(
