@@ -17,4 +17,8 @@ public class ProjectService {
     public List<Project> findAllProjects() {
         return projectRepository.findAll();
     }
+
+    public List<Project> findAllProjectsByEmployee(int employeeId) {
+        return projectRepository.findAllByEmployeeId(employeeId);
+    }
 }

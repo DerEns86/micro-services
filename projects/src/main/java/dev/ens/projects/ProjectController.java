@@ -24,4 +24,11 @@ public class ProjectController {
     public ResponseEntity<List<Project>> findAllProjects() {
         return ResponseEntity.ok(projectService.findAllProjects());
     }
+
+    @GetMapping("/employee/{employee-id}")
+    public ResponseEntity<List<Project>> findAllProjectsByEmployee (
+            @PathVariable ("employee-id") int employeeId
+    ){
+        return ResponseEntity.ok(projectService.findAllProjectsByEmployee(employeeId));
+    }
 }
