@@ -22,4 +22,9 @@ public class EmployeeController {
     public ResponseEntity<Employee> createEmployee(@RequestBody Employee employee) {
         return ResponseEntity.ok(employeeService.createEmployee(employee));
     }
+
+    @GetMapping("/projects/{employee-id}")
+    public ResponseEntity<FullEmployeeResponse> getEmployees(@PathVariable("employee-id") int employeeId) {
+        return ResponseEntity.ok(employeeService.findEmployeesWithStudents(employeeId));
+    }
 }
